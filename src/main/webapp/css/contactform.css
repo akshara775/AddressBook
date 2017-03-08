@@ -1,0 +1,16 @@
+addressBox {
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}
+
+address {
+    display: block;
+    font-style: italic;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+    width: 30px;
+    height:200px;
+}

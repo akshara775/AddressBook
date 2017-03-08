@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Get Address Book By Id</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="css/contact.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="scripts/getContactById.js"></script>
+</head>
+
+<body>
+
+
+	<div class="navbar navbar-inverse">
+		<div class="container-fluid">
+
+			<!-- Logo -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#menuNavBar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">Address Book Application</a>
+			</div>
+
+			<!-- Menu item-->
+			<div class="collapse navbar-collapse" id="menuNavBar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="AddContacts.html">Home</a></li>
+					<li><a href="GetAllContacts.html">GetAll</a></li>
+					<li><a href="GetContactById.html?id=1">GetOne</a></li>
+
+					<!-- Dropdown menu-->
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown">App <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="AddContacts.html">Insert</a></li>
+							<li><a href="GetAllContacts.html">GetAll</a></li>
+							<li><a href="GetContactById.html?id=1">GetOne</a></li>
+						</ul></li>
+				</ul>
+				<!-- Logout menu-->
+				 
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container-fluid">
+	<h4 class="h4">Address Book Application</h4>
+		<table class="table table-striped table-responsive">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>firstName</th>
+					<th>middleName</th>
+					<th>lastName</th>
+					<th>fax</th>
+					<th>dateOfBirth</th>
+					<th>homeAddress</th>
+					<th>workAddress</th>
+					<th>homePhone</th>
+					<th>workPhone</th>
+					<th>cellNumber</th>
+					<th>EmailIds</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+</body>
+</html>

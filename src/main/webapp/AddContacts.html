@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Address Book Application</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="contact.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="scripts/AddressBook.js"></script>
+<script src="scripts/deleteContactId.js"></script>
+</head>
+<body>
+
+	<div class="navbar navbar-inverse">
+		<div class="container-fluid">
+
+			<!-- Logo -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#menuNavBar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">Address Book Application</a>
+			</div>
+
+			<!-- Menu item-->
+			<div class="collapse navbar-collapse" id="menuNavBar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="AddContacts.html">Home</a></li>
+					<li><a href="GetAllContacts.html">GetAll</a></li>
+					<li><a href="GetContactById.html?id=1">GetOne</a></li>
+
+					<!-- Dropdown menu-->
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown">App <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="AddContacts.html">Insert</a></li>
+							<li><a href="GetAllContacts.html">GetAll</a></li>
+							<li><a href="GetContactById.html?id=1">GetOne</a></li>
+						</ul></li>
+				</ul>
+				<!-- Logout menu-->
+				 
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container-fluid ">
+		<h4 class="h4">Address Book Application</h4>
+			<div id = "contactIdAlert"></div>
+			<div id = "deleteIdAlert"></div>
+			<div id = "deleteIdSuccess"></div>
+		<table class="table table-striped table-responsive" id="myTable">
+		
+			<tr>
+				<th>FirstName</th>
+				<th>LastName</th>
+				<th>EmailId</th>
+				<th>cell Number</th>
+				<th>Address</th>
+				<th>Save Option</th>
+			</tr>
+			
+			<tr id="row1">
+				<td>Jill</td>
+				<td>Smith</td>
+				<td>smith.jill@gmail.com</td>
+				<td>(816) 200-7091</td>
+				<td>Houston, TX</td>
+				<td><button type="button" class="btn btn-primary"
+						onClick="onSubmit('row1')">
+						<span class="glyphicon glyphicon-user"></span> Add Contact
+					</button></td>
+			</tr>
+			
+			<tr id="row2">
+				<td>Eve</td>
+				<td>Jackson</td>
+				<td>jackson.eve@gmail.com</td>
+				<td>(234) 589-7899</td>
+				<td>Kansas City, MO</td>
+				<td><button type="button" class="btn btn-primary"
+						onClick="onSubmit('row2') ">
+						<span class="glyphicon glyphicon-user"></span> Add Contact
+					</button></td>
+			</tr>
+
+			<tr id="row3">
+				<td>John</td>
+				<td>Doe</td>
+				<td>doe.john@gmail.com</td>
+				<td>(476) 743-8631</td>
+				<td>Harrisburg, PA</td>
+				<td><button type="button" class="btn btn-primary"
+						onClick="onSubmit('row3')">
+						<span class="glyphicon glyphicon-user"></span> Add Contact
+					</button></td>
+			</tr>
+
+		</table>
+		<div class="row container-fluid">
+			<button type="button" class="btn btn-primary  col-xs-offset-0"
+				onClick="location.href='GetAllContacts.html'">
+				<span class="glyphicon glyphicon-list"></span> Get all contacts
+			</button>
+			<input id="id" type="text" class="col-xs-offset-1"></input>
+			<button type="button" class="btn btn-primary col-xs-offset-0"
+				onClick="return sendTo('contactId');">
+				<span class="glyphicon glyphicon-list"></span> Get contact by ID
+			</button>
+			<input id="deleteId" type="text" class="col-xs-offset-1"></input>
+			<button type="button" class="btn btn-primary col-xs-offset-0"
+				onClick="return sendTo('deleteId');">
+				<span class="glyphicon glyphicon-list"></span> Delete
+			</button>
+			<button type="button" class="btn btn-primary col-xs-offset-1">Cancel</button>
+		</div>
+	</div>
+</body>
+</html>
